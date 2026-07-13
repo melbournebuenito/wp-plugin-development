@@ -3,7 +3,7 @@
     "private": true,
     "type": "module",
     "scripts": {
-        "build": "vite build",
+        "build": "APP_ENV=production ASSET_URL=/ composer build",
         "dev": "vite",
         "watch": "vite"
     },
