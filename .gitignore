@@ -27,3 +27,6 @@ _ide_helper.php
 Homestead.json
 Homestead.yaml
 Thumbs.db
+
+# Explicitly ensure Vercel sees your generated website files
+!/storage/app/static
