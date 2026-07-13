@@ -1,0 +1,3 @@
+[build]
+  command = "composer build"
+  publish = "storage/app/static"
