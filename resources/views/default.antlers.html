@@ -1,1 +1,65 @@
-{{ content }}
+<body class="bg-black">
+    
+    <div style="max-width: 600px; margin: 40px auto; padding: 20px; font-family: sans-serif; color: #fff; background-color: #111;">
+        
+        <h1 style="font-size: 28px; font-weight: bold; margin-bottom: 24px;">{{ title }}</h1>
+        
+        <div style="margin-bottom: 32px;">
+            {{ content }}
+        </div>
+
+        {{ form:registration_form_2 }}
+            {{ if success }}
+                <div style="padding: 15px; background-color: #1c5236; color: #d1e7dd; border-radius: 6px; margin-bottom: 20px;">
+                    Thanks! Your registration was successful.
+                </div>
+            {{ else }}
+                
+                <div style="display: none;">
+                    <label for="honeypot">Leave this field blank</label>
+                    <input type="text" name="honeypot" id="honeypot" tabindex="-1" autocomplete="off">
+                </div>
+                
+                {{ fields }}
+                    <div style="margin-bottom: 20px;">
+                        <label style="display: block; font-size: 14px; font-weight: 600; margin-bottom: 8px;" for="{{ handle }}">
+                            {{ display }}
+                        </label>
+                        
+                        <div class="custom-form-field">
+                            <style>
+                                .custom-form-field input, 
+                                .custom-form-field textarea {
+                                    width: 100%;
+                                    padding: 12px;
+                                    background-color: #222;
+                                    border: 1px solid #444;
+                                    border-radius: 6px;
+                                    color: #fff;
+                                    box-sizing: border-box;
+                                }
+                                .custom-form-field input:focus, 
+                                .custom-form-field textarea:focus {
+                                    border-color: #007bff;
+                                    outline: none;
+                                }
+                            </style>
+                            {{ field }}
+                        </div>
+                        
+                        {{ if error }}
+                            <span style="color: #ff4d4d; font-size: 13px; margin-top: 6px; display: block;">{{ error }}</span>
+                        {{ /if }}
+                    </div>
+                {{ /fields }}
+
+                <button type="submit" style="padding: 12px 24px; background-color: #007bff; color: white; border: none; border-radius: 6px; font-size: 16px; font-weight: bold; cursor: pointer;">
+                    Register
+                </button>
+                
+            {{ /if }}
+        {{ /form:registration_form_2 }}
+
+    </div>
+
+</body>
