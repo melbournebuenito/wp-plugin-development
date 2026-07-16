@@ -1,1 +1,39 @@
-{{ content }}
+<!-- resources/views/default.antlers.html -->
+<div class="max-w-2xl mx-auto px-4 py-12">
+    
+    <h1 class="text-3xl font-bold mb-6">{{ title }}</h1>
+    
+    <div class="prose mb-8">
+        {{ content }}
+    </div>
+
+    <!-- Your Form Container -->
+    {{ form:registration_form }}
+        {{ if success }}
+            <div class="p-4 bg-green-100 text-green-800 rounded">
+                Thanks! Your registration was successful.
+            </div>
+        {{ else }}
+            <!-- Loop through the fields you built in the CP -->
+            {{ fields }}
+                <div class="mb-4">
+                    <label class="block text-sm font-medium mb-1" for="{{ handle }}">
+                        {{ display }}
+                    </label>
+                    
+                    <!-- This renders the actual input element -->
+                    {{ field }}
+                    
+                    {{ if error }}
+                        <span class="text-red-500 text-sm mt-1 block">{{ error }}</span>
+                    {{ /if }}
+                </div>
+            {{ /fields }}
+
+            <button type="submit" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
+                Register
+            </button>
+        {{ /if }}
+    {{ /form:registration_form }}
+
+</div>
