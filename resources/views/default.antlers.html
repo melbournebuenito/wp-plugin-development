@@ -16,13 +16,15 @@
         {{ else }}
             <!-- Loop through the fields you built in the CP -->
             {{ fields }}
-                <div class="mb-4">
-                    <label class="block text-sm font-medium mb-1" for="{{ handle }}">
+                <div class="mb-5">
+                    <label class="block text-sm font-semibold text-gray-200 mb-2" for="{{ handle }}">
                         {{ display }}
                     </label>
                     
-                    <!-- This renders the actual input element -->
-                    {{ field }}
+                    <!-- Render the field but inject standard Tailwind styling -->
+                    <div class="[&_input]:w-full [&_input]:p-3 [&_input]:rounded [&_input]:bg-gray-800 [&_input]:text-white [&_input]:border [&_input]:border-gray-700 [&_textarea]:w-full [&_textarea]:p-3 [&_textarea]:rounded [&_textarea]:bg-gray-800 [&_textarea]:text-white [&_textarea]:border [&_textarea]:border-gray-700">
+                        {{ field }}
+                    </div>
                     
                     {{ if error }}
                         <span class="text-red-500 text-sm mt-1 block">{{ error }}</span>
