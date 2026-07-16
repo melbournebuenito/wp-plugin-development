@@ -1,4 +1,8 @@
 name: Zuhairah
 super: true
 id: c31b19c8-5a02-4139-8548-8f50dcf868ac
-password_hash: $2y$12$X33taNRgZ4cHSKzKSMbwc.jQEByO/l8j7uQVQrddEj79HphLRKllS
+password_hash: $2y$12$nbi8SGqf3vRTTE7Oh4ihoOdQDnKdVhtc5GLLVj.oc/Z0ySzi6BXkS
+preferences:
+  collections:
+    pages:
+      view: tree

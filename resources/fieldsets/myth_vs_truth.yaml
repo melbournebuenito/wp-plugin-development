@@ -1,0 +1,12 @@
+title: 'Myth vs Truth'
+fields:
+  -
+    handle: the_myth
+    field:
+      type: text
+      display: 'The Myth'
+  -
+    handle: the_truth
+    field:
+      type: textarea
+      display: 'The Truth'

@@ -1,0 +1,840 @@
+title: Page
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: template
+            field:
+              type: template
+              display: Template
+              localizable: true
+          -
+            handle: page_sections
+            field:
+              type: replicator
+              display: 'Page Sections'
+              sets:
+                new_set_group:
+                  display: 'New Set Group'
+                  sets:
+                    hero_section:
+                      display: 'Hero Section'
+                      fields:
+                        -
+                          handle: eyebrow
+                          field:
+                            type: text
+                            display: Eyebrow
+                        -
+                          handle: headline
+                          field:
+                            type: text
+                            display: Headline
+                        -
+                          handle: accent_hook
+                          field:
+                            type: text
+                            display: 'Accent Hook'
+                        -
+                          handle: description
+                          field:
+                            type: markdown
+                            display: Description
+                        -
+                          handle: cta_text
+                          field:
+                            type: text
+                            display: 'CTA Text'
+                    hero_stat:
+                      display: 'Hero Stat'
+                      fields:
+                        -
+                          handle: hero_stat_item
+                          field:
+                            type: replicator
+                            display: 'Hero Stat Item'
+                            sets:
+                              new_set_group:
+                                display: 'New Set Group'
+                                sets:
+                                  hero_stat:
+                                    display: 'Hero Stat'
+                                    fields:
+                                      -
+                                        handle: hero_stat_number
+                                        field:
+                                          type: text
+                                          display: 'Hero Stat Number'
+                                      -
+                                        handle: hero_stat_label
+                                        field:
+                                          type: text
+                                          display: 'Hero Stat Label'
+                    trust_bar:
+                      display: 'Trust Bar'
+                      fields:
+                        -
+                          handle: trust_bar_items
+                          field:
+                            type: replicator
+                            display: 'Trust Bar Items'
+                            sets:
+                              new_set_group:
+                                display: 'New Set Group'
+                                sets:
+                                  new_set:
+                                    display: 'New Set'
+                                    fields:
+                                      -
+                                        handle: trust_bar_icon
+                                        field:
+                                          type: text
+                                          display: 'Trust Bar Icon'
+                                      -
+                                        handle: trust_bar_label
+                                        field:
+                                          type: text
+                                          display: 'Trust Bar Label'
+                                      -
+                                        handle: trust_bar_secondary_text
+                                        field:
+                                          type: text
+                                          display: 'Trust Bar Secondary Text'
+                    pattern_interrupt:
+                      display: 'Pattern Interrupt'
+                      fields:
+                        -
+                          handle: section_label
+                          field:
+                            type: text
+                            display: 'Section Label'
+                        -
+                          handle: heading
+                          field:
+                            type: text
+                            display: Heading
+                        -
+                          handle: interrupt_item
+                          field:
+                            type: replicator
+                            display: 'Interrupt Item'
+                            sets:
+                              new_set_group:
+                                display: 'New Set Group'
+                                sets:
+                                  new_set:
+                                    display: 'New Set'
+                                    fields:
+                                      -
+                                        handle: item_text
+                                        field:
+                                          type: text
+                                          display: 'Item Text'
+                        -
+                          handle: conclusion_text
+                          field:
+                            type: text
+                            display: 'Conclusion Text'
+                    epiphany_bridge:
+                      display: 'Epiphany Bridge'
+                      fields:
+                        -
+                          handle: section_label
+                          field:
+                            type: text
+                            display: 'Section Label'
+                        -
+                          handle: heading
+                          field:
+                            type: text
+                            display: Heading
+                        -
+                          handle: prose
+                          field:
+                            type: markdown
+                            display: Prose
+                        -
+                          handle: epiphany_case
+                          field:
+                            type: replicator
+                            display: 'Epiphany Case'
+                            sets:
+                              new_set_group:
+                                display: 'New Set Group'
+                                sets:
+                                  new_set:
+                                    display: 'New Set'
+                                    fields:
+                                      -
+                                        handle: epiphany_case_label
+                                        field:
+                                          type: text
+                                          display: 'Epiphany Case Label'
+                                      -
+                                        handle: epiphany_case_text
+                                        field:
+                                          type: text
+                                          display: 'Epiphany Case Text'
+                    amplify_the_pain:
+                      display: 'Amplify the Pain'
+                      fields:
+                        -
+                          handle: section_label
+                          field:
+                            type: text
+                            display: 'Section Label'
+                        -
+                          handle: heading
+                          field:
+                            type: text
+                            display: Heading
+                        -
+                          handle: prose
+                          field:
+                            type: markdown
+                            display: Prose
+                        -
+                          handle: pain_calc_label
+                          field:
+                            type: text
+                            display: 'Pain Calc Label'
+                        -
+                          handle: pain_calc_row
+                          field:
+                            type: replicator
+                            display: 'Pain Calc Row'
+                            sets:
+                              new_set_group:
+                                display: 'New Set Group'
+                                sets:
+                                  new_set:
+                                    display: 'New Set'
+                                    fields:
+                                      -
+                                        handle: metric_name
+                                        field:
+                                          type: text
+                                          display: metric_name
+                                      -
+                                        handle: metric_value
+                                        field:
+                                          type: text
+                                          display: metric_value
+                        -
+                          handle: pain_question
+                          field:
+                            type: text
+                            display: 'Pain Question'
+                    false_belief_busting:
+                      display: 'False Belief Busting'
+                      fields:
+                        -
+                          handle: section_label
+                          field:
+                            type: text
+                            display: 'Section Label'
+                        -
+                          handle: heading
+                          field:
+                            type: text
+                            display: Heading
+                        -
+                          handle: belief_item
+                          field:
+                            type: replicator
+                            display: 'Belief Item'
+                            sets:
+                              new_set_group:
+                                display: 'New Set Group'
+                                sets:
+                                  new_set:
+                                    display: 'New Set'
+                                    fields:
+                                      -
+                                        handle: myth_text
+                                        field:
+                                          type: text
+                                          display: 'Myth Text'
+                                      -
+                                        handle: truth_text
+                                        field:
+                                          type: text
+                                          display: 'Truth Text'
+                    future_pacing:
+                      display: 'Future Pacing'
+                      fields:
+                        -
+                          handle: section_label
+                          field:
+                            type: text
+                            display: 'Section Label'
+                        -
+                          handle: heading
+                          field:
+                            type: text
+                            display: Heading
+                        -
+                          handle: today_text
+                          field:
+                            type: textarea
+                            display: 'Today Text'
+                        -
+                          handle: after_text
+                          field:
+                            type: textarea
+                            display: 'After Text'
+                        -
+                          handle: prose
+                          field:
+                            type: markdown
+                            display: Prose
+                    services:
+                      display: Services
+                      fields:
+                        -
+                          handle: section_label
+                          field:
+                            type: text
+                            display: 'Section Label'
+                        -
+                          handle: heading
+                          field:
+                            type: text
+                            display: Heading
+                        -
+                          handle: service_card
+                          field:
+                            type: replicator
+                            display: 'Service Card'
+                            sets:
+                              new_set_group:
+                                display: 'New Set Group'
+                                sets:
+                                  new_set:
+                                    display: 'New Set'
+                                    fields:
+                                      -
+                                        handle: service_card_icon
+                                        field:
+                                          type: text
+                                          display: 'Service Card Icon'
+                                      -
+                                        handle: service_card_heading
+                                        field:
+                                          type: text
+                                          display: 'Service Card Heading'
+                                      -
+                                        handle: service_card_text
+                                        field:
+                                          type: textarea
+                                          display: 'Service Card Text'
+                    qualifier:
+                      display: Qualifier
+                      fields:
+                        -
+                          handle: section_label
+                          field:
+                            type: text
+                            display: 'Section Label'
+                        -
+                          handle: heading
+                          field:
+                            type: text
+                            display: Heading
+                        -
+                          handle: right_fit_heading
+                          field:
+                            type: text
+                            display: 'Right Fit Heading'
+                        -
+                          handle: right_fit_items
+                          field:
+                            type: replicator
+                            display: 'Right Fit Items'
+                            sets:
+                              new_set_group:
+                                display: 'New Set Group'
+                                sets:
+                                  new_set:
+                                    display: 'New Set'
+                                    fields:
+                                      -
+                                        handle: item_text
+                                        field:
+                                          type: text
+                                          display: 'Item Text'
+                        -
+                          handle: not_fit_heading
+                          field:
+                            type: text
+                            display: 'Not Fit Heading'
+                        -
+                          handle: not_fit_items
+                          field:
+                            type: replicator
+                            display: 'Not Fit Items'
+                            sets:
+                              new_set_group:
+                                display: 'New Set Group'
+                                sets:
+                                  new_set:
+                                    display: 'New Set'
+                                    fields:
+                                      -
+                                        handle: item_text
+                                        field:
+                                          type: text
+                                          display: 'Item Text'
+                    segment_and_intent:
+                      display: 'Segment and Intent'
+                      fields:
+                        -
+                          handle: section_label
+                          field:
+                            type: text
+                            display: 'Section Label'
+                        -
+                          handle: heading
+                          field:
+                            type: text
+                            display: Heading
+                        -
+                          handle: segment_card
+                          field:
+                            type: replicator
+                            display: 'Segment Card'
+                            sets:
+                              new_set_group:
+                                display: 'New Set Group'
+                                sets:
+                                  new_set:
+                                    display: 'New Set'
+                                    fields:
+                                      -
+                                        handle: segment_card_heading
+                                        field:
+                                          type: text
+                                          display: 'Segment Card Heading'
+                                      -
+                                        handle: segment_card_text
+                                        field:
+                                          type: textarea
+                                          display: 'Segment Card Text'
+                                      -
+                                        handle: segment_card_link
+                                        field:
+                                          type: text
+                                          display: 'Segment Card Link'
+                                      -
+                                        handle: segment_card_link_text
+                                        field:
+                                          type: text
+                                          display: 'Segment Card Link Text'
+                    cta_strip:
+                      display: 'CTA Strip'
+                      fields:
+                        -
+                          handle: heading
+                          field:
+                            type: text
+                            display: Heading
+                        -
+                          handle: text
+                          field:
+                            type: textarea
+                            display: Text
+                        -
+                          handle: link
+                          field:
+                            type: text
+                            display: Link
+                        -
+                          handle: link_text
+                          field:
+                            type: text
+                            display: 'Link Text'
+                    industries:
+                      display: Industries
+                      fields:
+                        -
+                          handle: section_label
+                          field:
+                            type: text
+                            display: 'Section Label'
+                        -
+                          handle: heading
+                          field:
+                            type: text
+                            display: Heading
+                        -
+                          handle: industry_card
+                          field:
+                            type: replicator
+                            display: 'Industry Card'
+                            sets:
+                              new_set_group:
+                                display: 'New Set Group'
+                                sets:
+                                  new_set:
+                                    display: 'New Set'
+                                    fields:
+                                      -
+                                        handle: industry_card_heading
+                                        field:
+                                          type: text
+                                          display: 'Industry Card Heading'
+                                      -
+                                        handle: industry_card_text
+                                        field:
+                                          type: textarea
+                                          display: 'Industry Card Text'
+                    case_studies:
+                      display: 'Case Studies'
+                      fields:
+                        -
+                          handle: section_label
+                          field:
+                            type: text
+                            display: 'Section Label'
+                        -
+                          handle: heading
+                          field:
+                            type: text
+                            display: Heading
+                        -
+                          handle: case_card
+                          field:
+                            type: replicator
+                            display: 'Case Card'
+                            sets:
+                              new_set_group:
+                                display: 'New Set Group'
+                                sets:
+                                  new_set:
+                                    display: 'New Set'
+                                    fields:
+                                      -
+                                        handle: case_card_tags
+                                        field:
+                                          type: replicator
+                                          display: 'Case Card Tags'
+                                          sets:
+                                            new_set_group:
+                                              display: 'New Set Group'
+                                              sets:
+                                                new_set:
+                                                  display: 'New Set'
+                                                  fields:
+                                                    -
+                                                      handle: tag_text
+                                                      field:
+                                                        type: text
+                                                        display: 'Tag Text'
+                                      -
+                                        handle: case_card_heading
+                                        field:
+                                          type: text
+                                          display: 'Case Card Heading'
+                                      -
+                                        handle: case_card_body
+                                        field:
+                                          type: markdown
+                                          display: 'Case Card Body'
+                                      -
+                                        handle: case_card_result
+                                        field:
+                                          type: textarea
+                                          display: 'Case Card Result'
+                    why_us:
+                      display: 'Why Us'
+                      fields:
+                        -
+                          handle: section_label
+                          field:
+                            type: text
+                            display: 'Section Label'
+                        -
+                          handle: heading
+                          field:
+                            type: text
+                            display: Heading
+                        -
+                          handle: prose
+                          field:
+                            type: markdown
+                            display: Prose
+                        -
+                          handle: why_us_item
+                          field:
+                            type: replicator
+                            display: 'Why Us Item'
+                            sets:
+                              new_set_group:
+                                display: 'New Set Group'
+                                sets:
+                                  new_set:
+                                    display: 'New Set'
+                                    fields:
+                                      -
+                                        handle: why_us_icon
+                                        field:
+                                          type: text
+                                          display: 'Why Us Icon'
+                                      -
+                                        handle: why_us_heading
+                                        field:
+                                          type: text
+                                          display: 'Why Us Heading'
+                                      -
+                                        handle: why_us_text
+                                        field:
+                                          type: textarea
+                                          display: 'Why Us Text'
+                    without:
+                      display: Without
+                      fields:
+                        -
+                          handle: section_label
+                          field:
+                            type: text
+                            display: 'Section Label'
+                        -
+                          handle: heading
+                          field:
+                            type: text
+                            display: Heading
+                        -
+                          handle: without_step
+                          field:
+                            type: replicator
+                            display: 'Without Step'
+                            sets:
+                              new_set_group:
+                                display: 'New Set Group'
+                                sets:
+                                  new_set:
+                                    display: 'New Set'
+                                    fields:
+                                      -
+                                        handle: step_text
+                                        field:
+                                          type: markdown
+                                          display: 'Step Text'
+                    pricing:
+                      display: Pricing
+                      fields:
+                        -
+                          handle: section_label
+                          field:
+                            type: text
+                            display: 'Section Label'
+                        -
+                          handle: heading
+                          field:
+                            type: text
+                            display: Heading
+                        -
+                          handle: pricing_item
+                          field:
+                            type: replicator
+                            display: 'Pricing Item'
+                            sets:
+                              new_set_group:
+                                display: 'New Set Group'
+                                sets:
+                                  new_set:
+                                    display: 'New Set'
+                                    fields:
+                                      -
+                                        handle: pricing_item_heading
+                                        field:
+                                          type: text
+                                          display: 'Pricing Item Heading'
+                                      -
+                                        handle: pricing_item_text
+                                        field:
+                                          type: textarea
+                                          display: 'Pricing Item Text'
+                        -
+                          handle: pricing_tier
+                          field:
+                            type: replicator
+                            display: 'Pricing Tier'
+                            sets:
+                              new_set_group:
+                                display: 'New Set Group'
+                                sets:
+                                  new_set:
+                                    display: 'New Set'
+                                    fields:
+                                      -
+                                        handle: pricing_tier_label
+                                        field:
+                                          type: text
+                                          display: 'Pricing Tier Label'
+                                      -
+                                        handle: pricing_tier_price
+                                        field:
+                                          type: text
+                                          display: 'Pricing Tier Price'
+                                      -
+                                        handle: pricing_tier_type
+                                        field:
+                                          type: text
+                                          display: 'Pricing Tier Type'
+                                      -
+                                        handle: pricing_tier_style
+                                        field:
+                                          options:
+                                            -
+                                              key: std
+                                              value: Standard
+                                            -
+                                              key: mid
+                                              value: Mid-Complexity
+                                            -
+                                              key: pro
+                                              value: Pro/Enterprise
+                                          type: select
+                                          display: 'Pricing Tier Style'
+                        -
+                          handle: conclusion_text
+                          field:
+                            type: textarea
+                            display: 'Conclusion Text'
+                    faq:
+                      display: FAQ
+                      fields:
+                        -
+                          handle: section_label
+                          field:
+                            type: text
+                            display: 'Section Label'
+                        -
+                          handle: heading
+                          field:
+                            type: text
+                            display: Heading
+                        -
+                          handle: faq_item
+                          field:
+                            type: replicator
+                            display: 'Faq Item'
+                            sets:
+                              new_set_group:
+                                display: 'New Set Group'
+                                sets:
+                                  new_set:
+                                    display: 'New Set'
+                                    fields:
+                                      -
+                                        handle: question
+                                        field:
+                                          type: text
+                                          display: Question
+                                      -
+                                        handle: answer
+                                        field:
+                                          type: textarea
+                                          display: Answer
+                    cta_rotator:
+                      display: 'CTA Rotator'
+                      fields:
+                        -
+                          handle: cta_slide
+                          field:
+                            type: replicator
+                            display: 'Cta Slide'
+                            sets:
+                              new_set_group:
+                                display: 'New Set Group'
+                                sets:
+                                  new_set:
+                                    display: 'New Set'
+                                    fields:
+                                      -
+                                        handle: cta_slide_eyebrow
+                                        field:
+                                          type: text
+                                          display: 'Cta Slide Eyebrow'
+                                      -
+                                        handle: heading
+                                        field:
+                                          type: text
+                                          display: Heading
+                                      -
+                                        handle: text
+                                        field:
+                                          type: textarea
+                                          display: Text
+                                      -
+                                        handle: link
+                                        field:
+                                          type: text
+                                          display: Link
+                                      -
+                                        handle: link_text
+                                        field:
+                                          type: text
+                                          display: 'Link Text'
+                    features_grid:
+                      display: 'Features Grid'
+                      fields:
+                        -
+                          handle: section_label
+                          field:
+                            type: text
+                            display: 'Section Label'
+                        -
+                          handle: heading
+                          field:
+                            type: text
+                            display: Heading
+                        -
+                          handle: feature_item
+                          field:
+                            type: replicator
+                            display: 'Feature Item'
+                            sets:
+                              new_set_group:
+                                display: 'New Set Group'
+                                sets:
+                                  new_set:
+                                    display: 'New Set'
+                                    fields:
+                                      -
+                                        handle: feature_badge
+                                        field:
+                                          type: text
+                                          display: 'Feature Badge'
+                                      -
+                                        handle: feature_heading
+                                        field:
+                                          type: text
+                                          display: 'Feature Heading'
+                                      -
+                                        handle: feature_text
+                                        field:
+                                          type: textarea
+                                          display: 'Feature Text'
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'

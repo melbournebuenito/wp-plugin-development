@@ -1,0 +1,17 @@
+title: 'Feature/Service Card'
+fields:
+  -
+    handle: title
+    field:
+      type: text
+      display: Title
+  -
+    handle: description
+    field:
+      type: textarea
+      display: Description
+  -
+    handle: icon_emoji
+    field:
+      type: text
+      display: Icon/Emoji

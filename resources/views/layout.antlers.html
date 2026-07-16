@@ -6,10 +6,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>{{ (title ?? site:name) | sanitize }}</title>
         {{ vite src="resources/js/site.js|resources/css/site.css" }}
+
+        <!-- Link your custom standalone CSS file -->
+        <link rel="stylesheet" href="/css/custom.css">
     </head>
-    <body class="bg-zinc-100 dark:bg-zinc-900 font-sans leading-normal text-zinc-800 dark:text-zinc-400">
-        <div class="mx-auto px-2 lg:min-h-screen flex flex-col items-center justify-center">
+    <body class="bg-black">
+        
             {{ template_content }}
-        </div>
+
+        <!-- Link your custom standalone JS file -->
+        <script src="/js/custom.js"></script>
     </body>
 </html>
+ 
